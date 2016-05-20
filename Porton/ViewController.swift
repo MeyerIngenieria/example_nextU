@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var MessageLabel: UILabel!
+    @IBOutlet weak var nametextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +22,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func ChangeMessage(sender: AnyObject) {
+        MessageLabel.text = "Hola  \(nametextfield.text)"
+        view.endEditing(true)
+        
+    }
+// comentarios
+    
 }
 
